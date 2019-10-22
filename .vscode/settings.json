@@ -1,0 +1,21 @@
+{
+    "python.pythonPath": "venv.energy_stats/bin/python",
+    "python.testing.unittestEnabled": false,
+    "python.testing.nosetestsEnabled": false,
+    "python.testing.pytestEnabled": true,
+    "python.testing.pytestArgs": [
+        "-v"
+    ],
+    "files.watcherExclude": {
+        "**/.git/*": true,
+        "**/node_modules/*/**": true,
+        "**/venv*/*": true,
+        "**/pytest_cache/*": true
+    },
+    "python.terminal.launchArgs": [
+        "-m",
+        "IPython"
+    ],
+    "python.dataScience.jupyterServerURI": "local",
+    "git.ignoreLimitWarning": true
+}
