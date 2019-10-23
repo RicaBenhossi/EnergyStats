@@ -1,5 +1,5 @@
 {
-    "python.pythonPath": "venv.energy_stats/bin/python",
+    "python.pythonPath": "ve.energy/bin/python",
     "python.testing.unittestEnabled": false,
     "python.testing.nosetestsEnabled": false,
     "python.testing.pytestEnabled": true,
@@ -9,7 +9,7 @@
     "files.watcherExclude": {
         "**/.git/*": true,
         "**/node_modules/*/**": true,
-        "**/venv*/*": true,
+        "**/ve.*/*": true,
         "**/pytest_cache/*": true
     },
     "python.terminal.launchArgs": [

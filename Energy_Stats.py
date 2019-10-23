@@ -54,7 +54,7 @@ plt.show()
 
 pivot_kwh_mes_ano.plot(kind='bar')
 plt.suptitle('Comparativo Mês x Ano')
-plt.xticks(energy_data['mes'].unique() -1, calendar.month_abbr[1:13])
+plt.xticks(energy_data['mes'].unique() - 1, calendar.month_abbr[1:13])
 plt.xlabel('Mês')
 plt.ylabel('Kwh por dia')
 plt.show()
@@ -64,6 +64,4 @@ plot_print.show()
 
 pivot_kwh_mes_mes_2019, plt_print = plot_bar_kwh_single_year(2019)
 plot_print.show()
-
 # %%
-
