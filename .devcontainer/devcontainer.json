@@ -1,0 +1,215 @@
+// For format details, see https://aka.ms/vscode-remote/devcontainer.json or the definition README at
+// https://github.com/microsoft/vscode-dev-containers/tree/master/containers/python-3
+{
+	"name": "Energy Stats",
+	"context": "..",
+	"dockerFile": "Dockerfile",
+	// "runArgs": ["--name sendarchive"],
+	"PostCreatedCommand": ["&& wget https://github.com/RicaBenhossi/pip_requirements/archive/EnergyStats.zip && unzip EnergyStats.zip && mkdir /tmp/pip-tmp && mv pip_requirements-EnergyStats/requirements.txt /tmp/pip-tmp/ && rm -r *EnergyStats* && pip --disable-pip-version-check --no-cache-dir install -r /tmp/pip-tmp/requirements.txt && rm -rf /tmp/pip-tmp"]
+
+	// Use 'settings' to set *default* container specific settings.json values on container create.
+	// You can edit these settings after create using File > Preferences > Settings > Remote.
+	"settings": {
+		"terminal.integrated.shell.linux": "/bin/bash",
+		"python.pythonPath": "/usr/local/bin/python",
+		"python.linting.enabled": true,
+		"python.linting.pylintEnabled": false,
+		"python.linting.flake8Enabled": true,
+		// "python.linting.pylintPath": "/usr/local/bin/pylint",
+
+		// USER
+		"editor.matchBrackets": "near",
+		"bracketPairColorizer.showBracketsInGutter": true,
+		"workbench.statusBar.visible": true,
+		"git.enableSmartCommit": true,
+		"git.confirmSync": false,
+		"explorer.confirmDragAndDrop": false,
+		"breadcrumbs.enabled": true,
+		"files.trimTrailingWhitespace": true,
+		"files.autoSave": "onFocusChange",
+		"files.watcherExclude": {
+			"**/.git/*": true,
+			"**/node_modules/*/**": true,
+			"**/ve.*/*": true,
+			"**/pytest_cache/*": true
+		},
+		"editor.renderWhitespace": "boundary",
+		"editor.cursorBlinking": "phase",
+		"editor.cursorStyle": "line-thin",
+		"editor.quickSuggestions": {
+			"other": true,
+			"comments": false,
+			"strings": true
+		},
+		"editor.acceptSuggestionOnEnter": "on",
+		"editor.quickSuggestionsDelay": 500,
+		"editor.suggestOnTriggerCharacters": true,
+		"editor.tabCompletion": "on",
+		"editor.suggest.localityBonus": true,
+		"editor.wordBasedSuggestions": true,
+		"editor.parameterHints.enabled": false,
+		"editor.parameterHints.cycle": false,
+		"editor.minimap.enabled": true,
+		"editor.minimap.showSlider": "always",
+		"gitlens.advanced.messages": {
+			"suppressShowKeyBindingsNotice": true
+		},
+		"gitlens.mode.active": "zen",
+		"workbench.activityBar.visible": true,
+		"explorer.confirmDelete": false,
+		"terminal.integrated.enableBell": true,
+		"terminal.integrated.rendererType":"dom",
+		"workbench.colorCustomizations": {
+			"tab.activeBorderTop": "#eeee",
+			"tab.inactiveBackground": "#0000",
+			"tab.inactiveForeground": "#c3c3c3",
+			"tab.border": "#5555",
+			"statusBar.foreground": "#eeee"
+		},
+		"editor.tokenColorCustomizations": {
+			"textMateRules": [
+				{
+					"scope":"variable.language",
+					"settings": {
+						"foreground": "#1578" //change to your preference
+					}
+				}
+			]
+		},
+
+		//FILE ACCESS
+		"files.exclude": {
+			"**/.git": false,
+			"**/.svn": true,
+			"**/.hg": true,
+			"**/CVS": true,
+			"**/.DS_Store": true
+		},
+
+		//PYTHON
+		"python.insidersChannel": "on",
+		"python.autoComplete.addBrackets": true,
+		"python.dataScience.sendSelectionToInteractiveWindow": true,
+		"python.testing.pytestEnabled": true,
+		"python.linting.pylintArgs": [
+			"--max-line-length=150"
+		],
+		"python.formatting.autopep8Args": [
+			"--max-line-length=150"
+			],
+		"autoDocstring.quoteStyle": "\"\"\"",
+		"[python]": {
+			"files.insertFinalNewline": true,
+			"files.encoding": "utf8"
+		},
+		"autoDocstring.docstringFormat": "google",
+		"autoDocstring.startOnNewLine": true,
+		"autoDocstring.includeName": true,
+
+		// GIT
+		"gitlens.views.fileHistory.enabled": true,
+		"gitlens.views.lineHistory.enabled": true,
+
+		"typescript.disableAutomaticTypeAcquisition": true,
+		"vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+		"editor.suggestSelection": "first",
+		"git.autofetch": true,
+		"workbench.iconTheme": "vscode-icons",
+		"sync.forceDownload": true,
+		"extensions.showRecommendationsOnlyOnDemand": true,
+		"fileAccess.position": "right",
+		"resmon.show.battery": false,
+		"resmon.show.cpufreq": false,
+		"workbench.colorTheme": "Spacegray Python",
+		"window.titleBarStyle": "custom",
+
+		"diffEditor.ignoreTrimWhitespace": false,
+		"diffEditor.renderSideBySide": false,
+		"window.zoomLevel": -1,
+		"editor.fontSize": 13,
+		"todo-tree.general.tags": [
+			"TODO",
+			"FIXME",
+			"NOTE",
+			"DONE"
+		],
+		"todo-tree.highlights.customHighlight": {
+			"TODO": {
+				"icon": "alert",
+				"type": "line",
+				"foreground": "yellow",
+				"background": "yellow",
+				"opacity": 30,
+				"iconColour": "yellow"
+			},
+			"FIXME": {
+				"icon": "bug",
+				"foreground": "red",
+				"type": "line",
+				"background": "red",
+				"opacity": 20,
+				"iconColour": "red"
+			},
+			"NOTE": {
+				"icon": "note",
+				"foreground": "lightblue",
+				"type": "text",
+				"background": "",
+				"iconColour": "lightblue"
+			},
+			"DONE": {
+				"icon": "check",
+				"foreground": "green",
+				"type": "line",
+				"background": "green",
+				"opacity": 10,
+				"iconColour": "green"
+			}
+		},
+		"clockify.apiKey": "XaSrbooXCEwDMunn",
+		"search.searchOnType": true,
+		"remote.extensionKind": {
+			"ms-azuretools.vscode-docker": "workspace"
+		}
+	},
+
+	// Use 'appPort' to create a container with published ports. If the port isn't working, be sure
+	// your server accepts connections from all interfaces (0.0.0.0 or '*'), not just localhost.
+	// "appPort": [],
+
+	// Uncomment the next line to run commands after the container is created.
+	// "postCreateCommand": "pip install -r requirements.txt",
+
+	// Uncomment the next line to have VS Code connect as an existing non-root user in the container.
+	// On Linux, by default, the container user's UID/GID will be updated to match your local user. See
+	// https://aka.ms/vscode-remote/containers/non-root for details on adding a non-root user if none exist.
+	"remoteUser": "benhossi",
+	"containerUser": "benhossi",
+
+	// Add the IDs of extensions you want installed when the container is created in the array below.
+	"extensions": [
+		"njpwerner.autodocstring",
+		"alefragnani.bookmarks",
+		"wmaurer.change-case",
+		"tobiaswaelde.clockify-tracker",
+		"batisteo.vscode-django",
+		"ms-azuretools.vscode-docker",
+		"mycelo.embrace",
+		"donjayamanne.git-extension-pack",
+		"donjayamanne.githistory",
+		"codezombiech.gitignore",
+		"axosoft.gitkraken-glo",
+		"eamodio.gitlens",
+		"magicstack.magicpython",
+		"shd101wyy.markdown-preview-enhanced",
+		"davidanson.vscode-markdownlint",
+		"ziyasal.vscode-open-in-github",
+		"alefragnani.project-manager",
+		"ms-python.python",
+		"dongli.python-preview",
+		"alefragnani.read-only-indicator",
+		"mutantdino.resourcemonitor",
+		"gruntfuggly.todo-tree",
+		"visualstudioexptteam.vscodeintellicode"
+	]
+}

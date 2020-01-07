@@ -33,7 +33,7 @@ def plot_bar_kwh_single_year(year):
     return pivot_kwh_mes_mes, plot_var
 
 
-energy_data = pd.read_csv('/home/ricabenhossi/Development/Projects/Personal/EnergyStats/EnergyData.csv')
+energy_data = pd.read_csv('EnergyData.csv')
 
 energy_data = energy_data.fillna(0)
 energy_data['aliquota_icms'] = np.where(energy_data['faixa_icms'] == 2, 25, np.where(energy_data['faixa_icms'] == 1, 12, 0))
