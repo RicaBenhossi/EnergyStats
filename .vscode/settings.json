@@ -1,21 +1,21 @@
 {
-    "python.pythonPath": "/usr/local/bin/python",
+    "python.pythonPath": "/opt/conda/bin/python",
     "python.testing.unittestEnabled": false,
     "python.testing.nosetestsEnabled": false,
     "python.testing.pytestEnabled": true,
-    "python.testing.pytestArgs": [
-        "-v"
-    ],
+    // "python.testing.pytestArgs": [
+    //     "-v"
+    // ],
     "files.watcherExclude": {
         "**/.git/*": true,
         "**/node_modules/*/**": true,
         "**/ve.*/*": true,
         "**/pytest_cache/*": true
     },
-    "python.terminal.launchArgs": [
-        "-m",
-        "IPython"
-    ],
+    // "python.terminal.launchArgs": [
+    //     "-m",
+    //     "IPython"
+    // ],
     "python.dataScience.jupyterServerURI": "local",
     "git.ignoreLimitWarning": true,
     "python.linting.pylintEnabled": false,

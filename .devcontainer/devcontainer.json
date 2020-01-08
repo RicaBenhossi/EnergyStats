@@ -4,8 +4,6 @@
 	"name": "Energy Stats",
 	"context": "..",
 	"dockerFile": "Dockerfile",
-	// "runArgs": ["--name sendarchive"],
-	"PostCreatedCommand": ["&& wget https://github.com/RicaBenhossi/pip_requirements/archive/EnergyStats.zip && unzip EnergyStats.zip && mkdir /tmp/pip-tmp && mv pip_requirements-EnergyStats/requirements.txt /tmp/pip-tmp/ && rm -r *EnergyStats* && pip --disable-pip-version-check --no-cache-dir install -r /tmp/pip-tmp/requirements.txt && rm -rf /tmp/pip-tmp"]
 
 	// Use 'settings' to set *default* container specific settings.json values on container create.
 	// You can edit these settings after create using File > Preferences > Settings > Remote.
@@ -179,12 +177,13 @@
 
 	// Uncomment the next line to run commands after the container is created.
 	// "postCreateCommand": "pip install -r requirements.txt",
+	// "PostCreatedCommand": ["pip install flake8 pytest pandas numpy matplotlib"],
 
 	// Uncomment the next line to have VS Code connect as an existing non-root user in the container.
 	// On Linux, by default, the container user's UID/GID will be updated to match your local user. See
 	// https://aka.ms/vscode-remote/containers/non-root for details on adding a non-root user if none exist.
-	"remoteUser": "benhossi",
-	"containerUser": "benhossi",
+	// "remoteUser": "benhossi",
+	// "containerUser": "benhossi",
 
 	// Add the IDs of extensions you want installed when the container is created in the array below.
 	"extensions": [
