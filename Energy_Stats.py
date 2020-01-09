@@ -5,6 +5,12 @@ import matplotlib.pyplot as plt
 import calendar
 
 
+def download_csv():
+    url = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQ_pun9yMi_ZBozhMigddzafI0Hh32ylWefraFRP2w154-' \
+            'JTwAi7jwIGW5oczDp7MdCMgjWCvHt0X6r/pub?gid=95383751&single=true&output=csv'
+    return pd.read_csv(url)
+
+
 def create_colum_taxes(new_column_name, calculation_base_column, calculation_quote_column, data_frame):
     data_frame[new_column_name] = np.around(data_frame[calculation_base_column] * (data_frame[calculation_quote_column] / 100), 3)
     return np.around(np.where(np.around((data_frame[new_column_name] - np.around(data_frame[new_column_name], 2)), 3).abs() == 0.005,
@@ -33,7 +39,7 @@ def plot_bar_kwh_single_year(year):
     return pivot_kwh_mes_mes, plot_var
 
 
-energy_data = pd.read_csv('EnergyData.csv')
+energy_data = download_csv()
 
 energy_data = energy_data.fillna(0)
 energy_data['aliquota_icms'] = np.where(energy_data['faixa_icms'] == 2, 25, np.where(energy_data['faixa_icms'] == 1, 12, 0))
