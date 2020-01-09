@@ -12,10 +12,10 @@
         "**/ve.*/*": true,
         "**/pytest_cache/*": true
     },
-    // "python.terminal.launchArgs": [
-    //     "-m",
-    //     "IPython"
-    // ],
+    "python.terminal.launchArgs": [
+        "-m",
+        "IPython"
+    ],
     "python.dataScience.jupyterServerURI": "local",
     "git.ignoreLimitWarning": true,
     "python.linting.pylintEnabled": false,
