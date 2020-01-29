@@ -70,4 +70,6 @@ plot_print.show()
 
 pivot_kwh_mes_mes_2019, plt_print = plot_bar_kwh_single_year(2019)
 plot_print.show()
+
+# TODO: Create a graphic for 2020
 # %%
