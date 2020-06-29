@@ -3,7 +3,7 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import calendar
-
+# %%
 
 def download_csv():
     url = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQ_pun9yMi_ZBozhMigddzafI0Hh32ylWefraFRP2w154-' \

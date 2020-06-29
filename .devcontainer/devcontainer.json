@@ -146,7 +146,6 @@
 				"iconColour": "green"
 			}
 		},
-		"clockify.apiKey": "XaSrbooXCEwDMunn",
 		"search.searchOnType": true,
 		"remote.extensionKind": {
 			"ms-azuretools.vscode-docker": "workspace"
@@ -171,7 +170,6 @@
 		"njpwerner.autodocstring",
 		"alefragnani.bookmarks",
 		"wmaurer.change-case",
-		"tobiaswaelde.clockify-tracker",
 		"batisteo.vscode-django",
 		"ms-azuretools.vscode-docker",
 		"mycelo.embrace",
@@ -190,6 +188,8 @@
 		"alefragnani.read-only-indicator",
 		"mutantdino.resourcemonitor",
 		"gruntfuggly.todo-tree",
-		"visualstudioexptteam.vscodeintellicode"
+		"visualstudioexptteam.vscodeintellicode",
+		"wakatime.vscode-wakatime",
+		"almenon.arepl"
 	]
 }
