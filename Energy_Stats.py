@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 import calendar
 # %%
 
-def download_csv():
+def download_data():
     url = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQ_pun9yMi_ZBozhMigddzafI0Hh32ylWefraFRP2w154-' \
             'JTwAi7jwIGW5oczDp7MdCMgjWCvHt0X6r/pub?gid=95383751&single=true&output=csv'
     return pd.read_csv(url)
@@ -39,10 +39,10 @@ def plot_bar_kwh_single_year(year):
     return pivot_kwh_mes_mes, plot_var
 
 
-energy_data = download_csv()
+energy_data = download_data()
 
 energy_data = energy_data.fillna(0)
-energy_data['aliquota_icms'] = np.where(energy_data['faixa_icms'] == 2, 25, np.where(energy_data['faixa_icms'] == 1, 12, 0))
+energy_data['aliquota_icms'] = np.where(energy_data['kwh'] < 50000, 0, np.where(energy_data['faixa_icms'] < 20000, 12, 25))
 taxes_field_list = list([['valor_icms', 'base_icms', 'aliquota_icms'],
                          ['valor_pis', 'base_pis_cofins', 'aliquota_pis'],
                          ['valor_cofins', 'base_pis_cofins', 'aliquota_cofins']])

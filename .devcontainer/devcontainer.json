@@ -67,6 +67,7 @@
 		},
 
 		//PYTHON
+		"python.languageServer": "Pylance",
 		"python.insidersChannel": "on",
 		"python.autoComplete.addBrackets": true,
 		"python.dataScience.sendSelectionToInteractiveWindow": true,
@@ -190,6 +191,7 @@
 		"gruntfuggly.todo-tree",
 		"visualstudioexptteam.vscodeintellicode",
 		"wakatime.vscode-wakatime",
-		"almenon.arepl"
+		"almenon.arepl",
+		"ms-python.vscode-pylance"
 	]
 }
